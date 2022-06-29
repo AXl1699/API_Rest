@@ -1,0 +1,10 @@
+ADMIN: axel
+CONTRASEÑA: anavfuego18
+
+
+LINK API: http://127.0.0.1:8000/api/lista_clientes
+
+profesora la api rest no funciona porque al modificar los atributos de la tabla cliente
+la base de dato nos da errores para ejecutarla, anterior a eso funcionaba bien.Si gusta puede revisar el codigo, esta todo codificado.
+
+recuerde que nosotros hicimos la anterior entrega con oracle y no funciono en los computadores del duoc.

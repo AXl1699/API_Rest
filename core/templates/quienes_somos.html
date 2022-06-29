@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>fashion Pets</title> 
+    <meta charset="utf-8">
+    <link href="{% static 'core/css/estilos.css' %}" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% static 'core/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+      function startTime() {
+      var today = new Date();
+      var hr = today.getHours();
+      var min = today.getMinutes();
+      var sec = today.getSeconds();
+      min = checkTime(min);
+      sec = checkTime(sec);
+      document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+      var time = setTimeout(function(){ startTime() }, 500);
+  }
+  function checkTime(i) {
+      if (i < 10) {
+          i = "0" + i;
+      }
+      return i;
+  }
+      </script>
+</head>
+<body style="background:  rgb(245, 244, 190);"onload="startTime()">
+{% load static %}
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- logo -->
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'core/img/logo.webp' %}" width="50" height="50" alt="">
+        </a>
+        
+        <!-- enlaces -->
+        <div class="collapse navbar-collapse" id="opciones">   
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'quienes_somos' %}">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'galeria' %}">Galeria de Fotos</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'cuenta' %}">Cuenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'formularioContacto' %}">Contactanos</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'feriados' %}">Fashion Feriados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Admin</a>
+            </li>  
+            <li class="nav-item" style="padding-left: 45px;">
+              <div id="clockdate">
+              <div class="clockdate-wrapper">
+                <div id="clock"></div>
+                <div id="date"></div>
+              </div>
+              </div>
+            </li>   
+          </ul>
+        </div>
+      </nav>
+     
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    <h1 class="titulo">Quienes Somos</h1>
+
+    <p style="text-align: center;"><img src="{% static 'core/img/logo.webp' %}" width="300" height="300"></p>
+
+    <h4 style="text-align: center; padding: 30px;">Somos un grupo de amigas que comenzó a realizar la venta de productos para mascotas como bandanas, correas e 
+      identificaciones, todo esto para ayudar a una fundación sin fines de lucro, todo partió a través de las redes 
+      sociales, pero en la actualidad es casi imposible dar abasto a la demanda a través de las redes sociales por eso creamos esta pagina web para alivianar la carga
+      que conlleva la venta de articulos de mascotas, esperamos que les guste y agrade. Gracias por el apoyo a la fundacion.
+    </h4>
+    <p style="text-align: center;">
+      <video width="700" height="440" controls muted>
+        <source src="{% static 'core/video_Trim.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </p>
+      <!-- Remove the container if you want to extend the Footer to full width. -->
+
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #e9b304"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color: #f57702"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Conocenos:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Fashion Pets</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #cdf87c; height: 2px"
+                />
+            <p>
+              Somos un grupo de amigas que comenzó a realizar la venta de productos para mascotas como bandanas, correas e 
+identificaciones, todo esto para ayudar a una fundación sin fines de lucro.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Productos</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #cdf87c; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Jugetes</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Correas</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Ropa</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Accesorios</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Camas</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Transportadoras</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Enlaces</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #cdf87c; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Cuenta</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Ayuda</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contacto</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #cdf87c; height: 2px"
+                />
+            <p><i class="fas fa-envelope mr-3"></i> info@fashionpets.com</p>
+            <p><i class="fas fa-phone mr-3"></i></p>
+           
+            <tr>
+              <th><img src="{% static 'core/img/Facebook_f_logo.svg ' %}" width="50" height="50" alt=""></th>
+              <th><a class="text-white" href="#">Facebook</a></th>
+          </tr>
+            
+            <p><i class="fas fa-print mr-3"></i> </p>
+            <tr>
+              <th><img src="{% static 'core/img/instagram_icon_logo.png' %}" width="90" height="50" alt=""></th>
+              <th><a class="text-white" href="#">Instagram</a></th>
+          </tr>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2022 Copyright:
+      <a class="text-white" href=""
+         >Axel Arredondo Marcelo Colombara.cl</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+<!-- End of .container -->
+</body>
+</html>
